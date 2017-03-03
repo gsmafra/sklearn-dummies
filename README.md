@@ -10,8 +10,9 @@ import sklearn_dummies as skdm
 df = pd.DataFrame(['A', 'B', None, 'A'], columns=['val'])
 
 df_dummy = skdm.DataFrameDummies().fit_transform(df)
-
 ```
+
+Result:
 
    | val_A | val_B |
 ---|:-----:|:-----:|
@@ -22,8 +23,12 @@ df_dummy = skdm.DataFrameDummies().fit_transform(df)
 
 ## Installing
 
-Sklearn-dummies is available in [PyPI](https://pypi.python.org/pypi/sklearn_dummies). Installation via pip:
+Sklearn-dummies is available in [PyPI](https://pypi.python.org/pypi/sklearn_dummies). Install via pip:
 
 ```
 pip install sklearn_dummies
 ```
+
+## Docs
+
+[They're (or will be) here](http://sklearn-dummies.readthedocs.io)
