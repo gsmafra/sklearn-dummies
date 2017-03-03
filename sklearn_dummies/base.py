@@ -1,3 +1,9 @@
+"""
+
+Base module.
+
+"""
+
 import numpy as np
 import pandas as pd
 
@@ -6,12 +12,41 @@ from sklearn.base import TransformerMixin
 
 class DataFrameDummies(TransformerMixin):
 
+    """
+
+    Attributes
+    ----------
+
+    cat_cols : list
+        List of categorical columns
+
+    final_cols : list
+        List of all columns with dummy values
+
+    """
+
     def __init__(self):
 
         self.cat_cols = []
         self.final_cols = []
 
     def fit(self, df):
+
+        """
+
+        Parameters
+        ----------
+
+        df : pd.DataFrame
+            Provides the column names to be used.
+
+        Returns
+        -------
+
+        DataFrameDummies
+            Itself.
+
+        """
 
         self.cat_cols = list(df.columns)
         self.final_cols = list(pd.get_dummies(df).columns)
