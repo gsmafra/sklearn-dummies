@@ -82,17 +82,59 @@ class DataFrameDummies(TransformerMixin):
 
 class NPArrayDummies(TransformerMixin):
 
+    """
+
+    Attributes
+    ----------
+
+    labels : list
+        List of labels
+
+    """
+
     def __init__(self):
 
         self.labels = []
 
     def fit(self, X):
 
+        """
+
+        Parameters
+        ----------
+
+        X : np.ndarray
+            Provides the labels.
+
+        Returns
+        -------
+
+        NPArrayDummies
+            Itself.
+
+        """
+
         self.labels = np.unique(X[pd.notnull(X)])
 
         return self
 
     def transform(self, X):
+
+        """
+
+        Parameters
+        ----------
+
+        X : np.ndarray
+            Data to be dummified.
+
+        Returns
+        -------
+
+        Xt : np.ndarray
+            Transformed data
+
+        """
 
         Xt = np.empty([len(X), len(self.labels)])
 
