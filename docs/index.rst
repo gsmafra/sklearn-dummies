@@ -39,7 +39,7 @@ Sklearn-dummies is available in PyPI_. Install via pip:
 
 .. toctree::
 
-    modules.rst
+    sklearn_dummies.rst
 
 Indices and tables
 ==================
