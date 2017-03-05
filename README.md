@@ -31,4 +31,4 @@ pip install sklearn_dummies
 
 ## Docs
 
-[They're here](http://sklearn-dummies.readthedocs.io)
+[They're here](http://sklearn-dummies.readthedocs.io/en/latest/index.html)
