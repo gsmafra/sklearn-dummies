@@ -59,6 +59,22 @@ class DataFrameDummies(TransformerMixin):
 
     def transform(self, df):
 
+        """
+
+        Parameters
+        ----------
+
+        df : pd.DataFrame
+            Data to be dummified.
+
+        Returns
+        -------
+
+        pd.DataFrame
+            Transformed data
+
+        """
+
         if isinstance(df, pd.Series):
             df = pd.DataFrame(df)
 
