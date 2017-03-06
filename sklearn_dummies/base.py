@@ -48,12 +48,19 @@ class DataFrameDummies(TransformerMixin):
 
         """
 
+        if isinstance(df, pd.Series):
+            df = pd.DataFrame(df)
+
         self.cat_cols = list(df.columns)
+
         self.final_cols = list(pd.get_dummies(df).columns)
 
         return self
 
     def transform(self, df):
+
+        if isinstance(df, pd.Series):
+            df = pd.DataFrame(df)
 
         df = df.copy()
 
@@ -68,14 +75,14 @@ class DataFrameDummies(TransformerMixin):
 
         dfd = pd.get_dummies(df)
 
-        # replace values with nan where the original dataframe was null
-        for cat_col in self.cat_cols:
-            dfd.loc[df[cat_col].isnull(), dfd.columns.str.startswith(cat_col)] = np.nan
-
         # insert categories not present in the transformed dataframe
         for col in self.final_cols:
             if col not in dfd.columns:
-                dfd[col] = np.nan
+                dfd[col] = 0
+
+        # replace values with nan where the original dataframe was null
+        for cat_col in self.cat_cols:
+            dfd.loc[df[cat_col].isnull(), dfd.columns.str.startswith(cat_col)] = np.nan
 
         return dfd[self.final_cols]
 
