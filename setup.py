@@ -5,7 +5,7 @@ def run_setup():
 
     setup(
         name='sklearn_dummies',
-        version='0.1',
+        version='0.2',
         author='Gustavo Sena Mafra',
         author_email='gsenamafra@gmail.com',
         description='Scikit-learn label binarizer with support for missing values',

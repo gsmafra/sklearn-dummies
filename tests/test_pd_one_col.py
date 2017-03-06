@@ -1,3 +1,5 @@
+from os import path
+
 import pytest
 
 import numpy as np
@@ -8,7 +10,8 @@ from sklearn_dummies import DataFrameDummies
 
 @pytest.fixture
 def df():
-    return pd.read_csv('tests/test_data/data.csv')
+    filename = path.join('tests', 'test_data', 'data.csv')
+    return pd.read_csv(filename)
 
 
 class TestDF:
