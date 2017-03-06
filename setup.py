@@ -12,7 +12,7 @@ def run_setup():
         license='MIT',
         packages=find_packages(),
         url='https://github.com/gsmafra/sklearn-dummies',
-        install_requires=['numpy', 'pandas', 'scikit-learn']
+        install_requires=['numpy', 'pandas', 'scikit-learn', 'pytest']
         )
 
 
