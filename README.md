@@ -17,12 +17,12 @@ df_dummy = skdm.DataFrameDummies().fit_transform(df)
 
 Result:
 
-   | val_A | val_B |
----|:-----:|:-----:|
-0  |   1.0 |   0.0 |
-1  |   0.0 |   1.0 |
-2  |   NaN |   NaN |
-3  |   1.0 |   0.0 |
+|     | val_A | val_B |
+| --- |:-----:|:-----:|
+| 0   |   1.0 |   0.0 |
+| 1   |   0.0 |   1.0 |
+| 2   |   NaN |   NaN |
+| 3   |   1.0 |   0.0 |
 
 ## Installing
 
