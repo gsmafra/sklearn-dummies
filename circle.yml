@@ -1,4 +1,4 @@
 test:
   override:
-    - pytest --cov=sklearn_dummies
+    - pytest --cov
     - codecov --token=16bfbcfe-9f93-4b04-852a-8a695b762fc0
