@@ -1,5 +1,6 @@
 [<img src="https://readthedocs.org/projects/sklearn_dummies/badge/?version=latest">](http://readthedocs.org/projects/sklearn-dummies/)
 [![CircleCI](https://circleci.com/gh/gsmafra/sklearn-dummies.svg?style=shield)](https://circleci.com/gh/gsmafra/sklearn-dummies)
+[![codecov](https://codecov.io/gh/gsmafra/sklearn-dummies/branch/master/graph/badge.svg)](https://codecov.io/gh/gsmafra/sklearn-dummies)
 
 # sklearn-dummies
 Scikit-learn label binarizer with support for missing values
