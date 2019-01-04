@@ -7,6 +7,7 @@ jobs:
     steps:
       - checkout
       - run:
+        name: run tests
         command : |
           python -m venv venv
           source venv/bin/activate
