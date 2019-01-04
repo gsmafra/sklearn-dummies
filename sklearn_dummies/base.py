@@ -30,7 +30,7 @@ class DataFrameDummies(TransformerMixin):
         self.cat_cols = []
         self.final_cols = []
 
-    def fit(self, df):
+    def fit(self, df, y=None):
 
         """
 
@@ -57,7 +57,7 @@ class DataFrameDummies(TransformerMixin):
 
         return self
 
-    def transform(self, df):
+    def transform(self, df, y=None):
 
         """
 
@@ -119,7 +119,7 @@ class NPArrayDummies(TransformerMixin):
 
         self.labels = []
 
-    def fit(self, X):
+    def fit(self, X, y=None):
 
         """
 
@@ -141,7 +141,7 @@ class NPArrayDummies(TransformerMixin):
 
         return self
 
-    def transform(self, X):
+    def transform(self, X, y=None):
 
         """
 
