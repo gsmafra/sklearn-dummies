@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/sklearn-dummies
     docker:
-      - image: circleci/python:3.7.2
+      - image: circleci/python:3.6.7
     steps:
       - checkout
       - run:
