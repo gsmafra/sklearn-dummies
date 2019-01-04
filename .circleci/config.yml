@@ -11,5 +11,6 @@ jobs:
             python -m venv venv
             source venv/bin/activate
             pip install -r requirements.txt
-            pytest --cov
+            python setup.py install
+            pytest --cov sklearn_dummies
             codecov --token=16bfbcfe-9f93-4b04-852a-8a695b762fc0
