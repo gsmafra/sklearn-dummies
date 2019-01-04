@@ -13,4 +13,4 @@ jobs:
             pip install -r requirements.txt
             python setup.py install
             pytest --cov sklearn_dummies
-            codecov --token=16bfbcfe-9f93-4b04-852a-8a695b762fc0
+            bash <(curl -s https://codecov.io/bash)
