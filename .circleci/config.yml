@@ -7,10 +7,9 @@ jobs:
     steps:
       - checkout
       - run:
-        name: run tests
-        command : |
-          python -m venv venv
-          source venv/bin/activate
-          pip install -r requirements.txt
-          pytest --cov
-          codecov --token=16bfbcfe-9f93-4b04-852a-8a695b762fc0
+          command: |
+            python -m venv venv
+            source venv/bin/activate
+            pip install -r requirements.txt
+            pytest --cov
+            codecov --token=16bfbcfe-9f93-4b04-852a-8a695b762fc0
